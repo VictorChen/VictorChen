@@ -1,4 +1,3 @@
-// Generated on 2014-08-05 using generator-angular 0.9.5
 'use strict';
 
 // # Globbing
@@ -38,6 +37,12 @@ module.exports = function (grunt) {
               connect.static('app')
             ];
           }
+        }
+      },
+      dist: {
+        options: {
+          open: true,
+          base: 'dist'
         }
       }
     },
@@ -180,6 +185,20 @@ module.exports = function (grunt) {
       }
     },
 
+    ngAnnotate: {
+      options: {
+          singleQuotes: true,
+      },
+      app: {
+        files: [{
+          expand: true,
+          cwd: '.tmp/concat/scripts',
+          src: '*.js',
+          dest: '.tmp/concat/scripts'
+        }]
+      }
+    },
+
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -217,11 +236,17 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('serve', 'Compile then start a connect web server', [
-    'clean:server',
-    'compass:server',
-    'connect:server'
-  ]);
+  grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
+    if (target === 'dist') {
+      return grunt.task.run(['default', 'connect:dist:keepalive']);
+    }
+
+    grunt.task.run([
+      'clean:server',
+      'compass:server',
+      'connect:server',
+    ]);
+  });
 
   grunt.registerTask('default', [
     'clean:dist',
@@ -231,6 +256,7 @@ module.exports = function (grunt) {
     'imagemin',
     'svgmin',
     'concat',
+    'ngAnnotate',
     'copy:dist',
     'cssmin',
     'uglify',

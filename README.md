@@ -1,10 +1,1 @@
-AngularTest
-===========
-
-Install:
-
-`npm install`
-
-`bower install`
-
-`grunt`
+My awesome website built with Angular!
