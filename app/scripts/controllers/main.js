@@ -1,13 +1,6 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name angularTutorialApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the angularTutorialApp
- */
-angular.module('angularTutorialApp')
+angular.module('myApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -15,4 +8,5 @@ angular.module('angularTutorialApp')
       'Karma',
       'awsome things above ^^'
     ];
+    $scope.isCollapsed = false;
   });

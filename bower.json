@@ -2,7 +2,7 @@
   "name": "victor-chen",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "1.2.16",
+    "angular": "1.2.x",
     "angular-bootstrap": "0.12.x",
     "bootstrap-css-only": "3.3.x"
   }

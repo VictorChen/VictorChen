@@ -41,7 +41,7 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
-          open: true,
+          open: false,
           base: 'dist'
         }
       }
@@ -222,16 +222,15 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }, {
           expand: true,
-          cwd: '.',
-          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
-          dest: 'dist'
+          cwd: 'bower_components/bootstrap-css-only/fonts/',
+          src: '*',
+          dest: 'dist/fonts'
         }]
       },
-      styles: {
-        expand: true,
-        cwd: 'app/styles',
-        dest: '.tmp/styles/',
-        src: '{,*/}*.css'
+      // Overwrite bootstrap theme
+      bootstrap: {
+        src: 'libs/bootstrap.css',
+        dest: 'bower_components/bootstrap-css-only/css/bootstrap.css'
       }
     }
   });
@@ -258,6 +257,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
+    'copy:bootstrap',
     'cssmin',
     'uglify',
     'filerev',
