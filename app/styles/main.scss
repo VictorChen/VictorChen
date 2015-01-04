@@ -2,6 +2,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 // endbower
 
+$backgroundColor: #272b30;
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -23,24 +25,9 @@ body {
   padding-right: 15px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
 /* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+footer {
+  text-align: right;
 }
 
 .container-narrow > hr {
@@ -92,4 +79,9 @@ body {
   .header-placeholder {
       height: 50px;
   }
+}
+
+.section {
+  height: 400px;
+  background-color: $backgroundColor;
 }

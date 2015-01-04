@@ -4,6 +4,7 @@
   "dependencies": {
     "angular": "1.2.x",
     "angular-bootstrap": "0.12.x",
-    "bootstrap-css-only": "3.3.x"
+    "bootstrap-css-only": "3.3.x",
+    "angular-route": "~1.2.0"
   }
 }

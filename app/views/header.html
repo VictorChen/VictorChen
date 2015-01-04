@@ -1,0 +1,33 @@
+<header class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="home" class="navbar-brand visible-xs" ng-click="isCollapsed = false">Victor Chen</a>
+      </div>
+      <nav class="hidden-xs">
+        <ul class="nav navbar-nav navbar-left">
+          <a href="home" role="button" class="navbar-brand">Victor Chen</a>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="home">Home</a></li>
+          <li><a href="apps">Apps</a></li>
+          <li><a href="contact">Contact Info</a></li>
+        </ul>
+      </nav>
+      <nav class="visible-xs" collapse="!isCollapsed">
+        <ul class="nav navbar-nav">
+          <li><a href="home" ng-click="isCollapsed = !isCollapsed">Home</a></li>
+          <li><a href="apps" ng-click="isCollapsed = !isCollapsed">Apps</a></li>
+          <li><a href="contact" ng-click="isCollapsed = !isCollapsed">Contact Info</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="header-placeholder"></div>
