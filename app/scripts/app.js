@@ -1,11 +1,15 @@
 'use strict';
 
-angular.module('myApp', ['ui.bootstrap', 'ngRoute'])
+angular.module('myApp', ['ui.bootstrap', 'ngRoute', 'ngAnimate'])
 .config(['$routeProvider', '$locationProvider',
   function ($routeProvider, $locationProvider) {
     $routeProvider
-      .when('/apps', {
-        templateUrl: '../views/apps.html',
+      .when('/experience', {
+        templateUrl: '../views/experience.html',
+        controller: 'MainCtrl'
+      })
+      .when('/projects', {
+        templateUrl: '../views/projects.html',
         controller: 'MainCtrl'
       })
       .when('/contact', {
@@ -13,7 +17,7 @@ angular.module('myApp', ['ui.bootstrap', 'ngRoute'])
         controller: 'MainCtrl'
       })
       .when('/', {
-        templateUrl: '../views/main.html',
+        templateUrl: '../views/home.html',
         controller: 'MainCtrl'
       })
       .otherwise({

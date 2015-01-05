@@ -1,0 +1,45 @@
+.section {
+  height: 600px;
+  background-color: #272b30;
+}
+
+.about-section {
+	@extend .section;
+	text-align: right;
+  background-image: url("../images/coffee.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+	.section-container {
+		padding-top: 240px;
+		padding-right: 60px;
+		font-size: 28px;
+		color: white;
+	}
+}
+
+.end-section {
+	@extend .section;
+	background-image: url("../images/coffee2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  .section-container {
+		padding-top: 240px;
+		padding-left: 60px;
+		font-size: 28px;
+		color: white;
+	}
+}
+
+.interests-section {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	.row:nth-child(1) {
+		margin-bottom: 20px;
+	}
+}
+
+.home-intro {
+	background-image: url("../images/gray_pattern.gif");
+	border: 0;
+}

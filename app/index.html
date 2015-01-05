@@ -3,22 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Victor</title>
-    <meta name="description" content="">
+    <meta name="description" content="Victor Chen's website">
     <meta name="viewport" content="width=device-width">
     <!-- build:css(.) styles/vendor.css -->
     <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css" />
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
     <!-- endbuild -->
   </head>
 
   <body ng-controller="MainCtrl">
     <div ng-include="'views/header.html'"></div>
 
-    <div ng-view></div>
+    <div class="view-animate-container">
+        <div ng-view class="view-animate"></div>
+    </div>
 
-    <footer>
+    <footer class="container-fluid">
       <p>© Victor Chen {{year}}</p>
     </footer>
 
@@ -26,6 +29,7 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
