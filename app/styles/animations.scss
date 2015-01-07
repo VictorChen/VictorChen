@@ -1,24 +1,49 @@
 @import "compass/css3/transition";
+@import "compass/css3/animation";
+@import "compass/css3/transform";
+@import "compass/css3/border-radius";
+
+@mixin verticalScroll($name, $height) {
+  @-webkit-keyframes #{$name} {
+    from {background-position:0 0;}
+    to {background-position:0 $height;}
+  }
+
+  @-moz-keyframes #{$name} {
+    from {background-position:0 0;}
+    to {background-position:0 $height;}
+  }
+
+  @-ms-keyframes #{$name} {
+    from {background-position:0 0;}
+    to {background-position:0 $height;}
+  }
+
+  @-o-keyframes #{$name} {
+    from {background-position:0 0;}
+    to {background-position:0 $height;}
+  }
+
+  @keyframes #{$name} {
+    from {background-position:0 0;}
+    to {background-position:0 $height;}
+  }
+}
 
 .morph {
   @include transition(all 0.5s ease-in-out);
   &:hover {
-    border-radius: 50%;
+    @include border-radius(50%);
     border: 5px solid white;
     padding: 10px;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
+    @include transform(rotate(360deg));
   }
 }
 
 .trim {
   display: inline-block;
   position: relative;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  @include transform(translateZ(0));
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   &:before {
     @include transition(all 0.5s ease-in-out);

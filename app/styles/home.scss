@@ -1,58 +1,30 @@
-@-webkit-keyframes bgscroll {
-	from {background-position:0 0;}
-	to {background-position:0 -324px;}
-}
+@import "animations";
+@import "mixins";
 
-@-moz-keyframes bgscroll {
-	from {background-position:0 0;}
-	to {background-position:0 -324px;}
-}
+$screenHeight: calc(100vh - 52px);
 
-@-ms-keyframes bgscroll {
-	from {background-position:0 0;}
-	to {background-position:0 -324px;}
-}
-
-@-o-keyframes bgscroll {
-	from {background-position:0 0;}
-	to {background-position:0 -324px;}
-}
-
-@keyframes bgscroll {
-	from {background-position:0 0;}
-	to {background-position:0 -324px;}
-}
-
-.section {
-  height: 600px;
+@mixin section (){
+  height: $screenHeight;
   background-color: #272b30;
-}
-
-.about-section {
-	@extend .section;
-	text-align: right;
-  background-image: url("../images/coffee.jpg");
   background-size: cover;
   background-attachment: fixed;
 	.section-container {
-		padding-top: 240px;
-		padding-right: 60px;
+		@include vertical-align;
+		padding: 60px;
 		font-size: 28px;
 		color: white;
 	}
 }
 
+.about-section {
+	@include section();
+	text-align: right;
+  background-image: url("../images/coffee.jpg");
+}
+
 .end-section {
-	@extend .section;
+	@include section();
 	background-image: url("../images/coffee2.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  .section-container {
-		padding-top: 240px;
-		padding-left: 60px;
-		font-size: 28px;
-		color: white;
-	}
 }
 
 .interests-section {
@@ -64,12 +36,14 @@
 	}
 }
 
+@include verticalScroll(bgscroll, -324px);
 .home-intro {
+	@include animation(bgscroll 10s infinite linear);
+	> div {
+		@include vertical-align;
+	}
+	height: $screenHeight;
+	text-align: center;
 	background-image: url("../images/gray_pattern.gif");
-	border: 0;
-	-webkit-animation:bgscroll 10s infinite linear;
-	-moz-animation:bgscroll 10s infinite linear;
-	-ms-animation:bgscroll 10s infinite linear;
-	-o-animation:bgscroll 10s infinite linear;
-	animation:bgscroll 10s infinite linear;
+	background-attachment: fixed;
 }

@@ -85,7 +85,6 @@ module.exports = function (grunt) {
         imagesDir: 'app/images',
         javascriptsDir: 'app/scripts',
         fontsDir: 'app/styles/fonts',
-        importPath: './bower_components',
         httpImagesPath: '/images',
         httpGeneratedImagesPath: '/images/generated',
         httpFontsPath: '/styles/fonts',
@@ -151,17 +150,6 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'app/images',
           src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: 'dist/images'
-        }]
-      }
-    },
-
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: 'app/images',
-          src: '{,*/}*.svg',
           dest: 'dist/images'
         }]
       }
@@ -253,7 +241,6 @@ module.exports = function (grunt) {
     'useminPrepare',
     'compass:dist',
     'imagemin',
-    'svgmin',
     'concat',
     'ngAnnotate',
     'copy:dist',
