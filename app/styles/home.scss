@@ -1,3 +1,28 @@
+@-webkit-keyframes bgscroll {
+	from {background-position:0 0;}
+	to {background-position:0 -324px;}
+}
+
+@-moz-keyframes bgscroll {
+	from {background-position:0 0;}
+	to {background-position:0 -324px;}
+}
+
+@-ms-keyframes bgscroll {
+	from {background-position:0 0;}
+	to {background-position:0 -324px;}
+}
+
+@-o-keyframes bgscroll {
+	from {background-position:0 0;}
+	to {background-position:0 -324px;}
+}
+
+@keyframes bgscroll {
+	from {background-position:0 0;}
+	to {background-position:0 -324px;}
+}
+
 .section {
   height: 600px;
   background-color: #272b30;
@@ -42,4 +67,9 @@
 .home-intro {
 	background-image: url("../images/gray_pattern.gif");
 	border: 0;
+	-webkit-animation:bgscroll 10s infinite linear;
+	-moz-animation:bgscroll 10s infinite linear;
+	-ms-animation:bgscroll 10s infinite linear;
+	-o-animation:bgscroll 10s infinite linear;
+	animation:bgscroll 10s infinite linear;
 }

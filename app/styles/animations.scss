@@ -1,0 +1,47 @@
+@import "compass/css3/transition";
+
+.morph {
+  @include transition(all 0.5s ease-in-out);
+  &:hover {
+    border-radius: 50%;
+    border: 5px solid white;
+    padding: 10px;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.trim {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  &:before {
+    @include transition(all 0.5s ease-in-out);
+    content: '';
+    position: absolute;
+    border: white solid 4px;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    opacity: 0;
+  }
+  &:hover:before, &:focus:before, &:active:before {
+    opacity: 1;
+    background-color: black;
+    color: black;
+  }
+}
+
+.color-change {
+  @include transition(all 0.5s ease-in-out);
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}

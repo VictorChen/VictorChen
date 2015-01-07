@@ -1,5 +1,8 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
+@import "animations";
+@import "home";
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -93,4 +96,11 @@ footer {
 
 .view-animate.ng-leave.ng-leave-active {
   opacity: 0;
+}
+
+// add my own hover effects!
+.navbar-nav > li > a:hover, .nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:hover {
+  background-image: none;
+  background-color: transparent;
 }
