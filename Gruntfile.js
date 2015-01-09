@@ -217,7 +217,7 @@ module.exports = function (grunt) {
       },
       // Overwrite bootstrap theme
       bootstrap: {
-        src: 'libs/bootstrap.css',
+        src: 'app/libs/bootstrap.css',
         dest: 'bower_components/bootstrap-css-only/css/bootstrap.css'
       }
     }
