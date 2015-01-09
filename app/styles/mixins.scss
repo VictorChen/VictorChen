@@ -1,5 +1,46 @@
+$screenHeight: calc(100vh - 50px);
+$backgroundColor: #272b30;
+$S: 320px;
+$M: 768px;
+$L: 1170px;
+
 @mixin vertical-align {
   position: relative;
   top: 50%;
   @include transform(translateY(-50%));
+}
+
+
+// media queries
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+@mixin section (){
+  height: $screenHeight;
+  background-color: $backgroundColor;
+  background-size: cover;
+  background-attachment: fixed;
+	.section-container {
+		@include vertical-align;
+		padding: 60px;
+		font-size: 28px;
+		color: white;
+	}
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
 }

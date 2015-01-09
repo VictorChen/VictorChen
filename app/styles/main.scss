@@ -1,6 +1,11 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
-@import "home";
+@import "animations";
+@import "mixins";
+
+.header-placeholder {
+  height: 30px;
+}
 
 /* Custom page footer */
 footer {
@@ -8,13 +13,9 @@ footer {
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@include MQ(M) {
   .container {
     max-width: 730px;
-  }
-
-  .header-placeholder {
-      height: 30px;
   }
 }
 
@@ -40,4 +41,230 @@ footer {
 .navbar-default .navbar-nav > li > a:hover {
   background-image: none;
   background-color: transparent;
+}
+
+/*_--__--_ HOME _--__--_ */
+.about-section {
+  @include section();
+  text-align: right;
+  background-image: url("../images/coffee.jpg");
+}
+
+.end-section {
+  @include section();
+  background-image: url("../images/coffee2.jpg");
+}
+
+.interests-section {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .row:nth-child(1) {
+    margin-bottom: 20px;
+  }
+}
+
+@include verticalScroll(bgscroll, -324px);
+.home-intro {
+  @include animation(bgscroll 10s infinite linear);
+  > div {
+    @include vertical-align;
+  }
+  height: $screenHeight;
+  text-align: center;
+  background-image: url("../images/gray_pattern.gif");
+  background-attachment: fixed;
+}
+
+/*_--__--_ EXPERIENCE _--__--_ */
+.cd-container {
+  @include clearfix;
+  width: 90%;
+  max-width: $L;
+  margin: 0 auto;
+  position: relative;
+  padding: 2em 0;
+  margin: {
+    top: 2em;
+    bottom: 2em;
+  }
+
+  &::before {
+    /* this is the vertical line */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+    background: white;
+  }
+
+  @include MQ(L) {
+    margin: {
+      top: 3em;
+      bottom: 3em;
+    }
+
+    &::before {
+      left: 50%;
+      margin-left: -2px;
+    }
+  }
+}
+
+.cd-timeline-block {
+  @include clearfix;
+  position: relative;
+  margin: 2em 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include MQ(L) {
+    margin: 4em 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cd-timeline-img {
+  @include border-radius(50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05);
+  background: #f0ca45;
+
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+  }
+
+  @include MQ(L) {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+  }
+}
+
+.cd-timeline-content {
+  @include border-radius(0.25em);
+  @include clearfix;
+  position: relative;
+  margin-left: 60px;
+  background: white;
+  padding: 1em;
+  box-shadow: 0 3px 0 darken($backgroundColor, 5%);
+
+  .cd-title {
+    color: #303e49;
+  }
+
+  .cd-data {
+    font-size: 13px;
+    color: #747272;
+    margin: 1em 0;
+    line-height: 1.6;
+    a {
+      color: #5C49FF;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .cd-date {
+    font-size: 13px;
+    color: white;
+    display: inline-block;
+    float: left;
+    padding: .8em 0;
+    opacity: .7;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid black;
+  }
+
+  @include MQ(M) {
+    .cd-title {
+      font-size: 20px;
+    }
+
+    .cd-data {
+      font-size: 16px;
+    }
+
+    .cd-date {
+      font-size: 14px;
+    }
+  }
+
+  @include MQ(L) {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+
+    &::before {
+      top: 24px;
+      left: 100%;
+      border-color: transparent;
+      border-left-color: white;
+    }
+
+    .cd-date {
+      position: absolute;
+      width: 100%;
+      left: 122%;
+      top: 6px;
+      font-size: 16px;
+    }
+
+    .cd-timeline-block:nth-child(even) & {
+      float: right;
+
+      &::before {
+        top: 24px;
+        left: auto;
+        right: 100%;
+        border-color: transparent;
+        border-right-color: white;
+      }
+
+      .cd-date {
+        left: auto;
+        right: 122%;
+        text-align: right;
+      }
+    }
+  }
 }
