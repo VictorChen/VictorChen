@@ -104,7 +104,7 @@ footer {
     background: white;
   }
 
-  @include MQ(L) {
+  @include MQ(M) {
     margin: {
       top: 3em;
       bottom: 3em;
@@ -130,7 +130,7 @@ footer {
     margin-bottom: 0;
   }
 
-  @include MQ(L) {
+  @include MQ(M) {
     margin: 4em 0;
 
     &:first-child {
@@ -164,7 +164,7 @@ footer {
     margin-top: -12px;
   }
 
-  @include MQ(L) {
+  @include MQ(M) {
     width: 60px;
     height: 60px;
     left: 50%;
@@ -220,6 +220,10 @@ footer {
   }
 
   @include MQ(M) {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+
     .cd-title {
       font-size: 20px;
     }
@@ -227,16 +231,6 @@ footer {
     .cd-data {
       font-size: 16px;
     }
-
-    .cd-date {
-      font-size: 14px;
-    }
-  }
-
-  @include MQ(L) {
-    margin-left: 0;
-    padding: 1.6em;
-    width: 45%;
 
     &::before {
       top: 24px;
@@ -250,7 +244,7 @@ footer {
       width: 100%;
       left: 122%;
       top: 6px;
-      font-size: 16px;
+      font-size: 14px;
     }
 
     .cd-timeline-block:nth-child(even) & {
