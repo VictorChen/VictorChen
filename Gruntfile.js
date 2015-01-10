@@ -155,6 +155,17 @@ module.exports = function (grunt) {
       }
     },
 
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'app/images',
+          src: '{,*/}*.svg',
+          dest: 'dist/images'
+        }]
+      }
+    },
+
     htmlmin: {
       dist: {
         options: {
@@ -241,6 +252,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'compass:dist',
     'imagemin',
+    'svgmin',
     'concat',
     'ngAnnotate',
     'copy:dist',
