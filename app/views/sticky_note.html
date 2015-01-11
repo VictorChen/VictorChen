@@ -1,0 +1,9 @@
+<div class="sticky-note" ng-click="showImage = !showImage">
+	<div class="sticky-title">
+		{{project.title}} <div class="technologies">{{project.technologies}}</div>
+	</div>
+	<div class="sticky-content" ng-hide="showImage" ng-bind-html="project.content"></div>
+	<div class="sticky-images" ng-show="showImage" ng-repeat="image in project.images">
+		<img ng-src="{{image}}">
+	</div>
+</div>

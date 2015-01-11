@@ -1,10 +1,28 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
+@import "compass/css3/box-shadow";
 @import "animations";
 @import "mixins";
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+html {
+  font-family: "Comic Sans MS",Helvetica,Arial,sans-serif;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+a {
+  color: #5C49FF;
+  text-decoration: none;
+  &:hover {
+    color: #B50000;
+    text-decoration: underline;
+  }
 }
 
 /* Responsive: Portrait tablets and up */
@@ -192,13 +210,6 @@ footer {
     margin: 1em 0;
     line-height: 1.6;
     text-indent: 30px;
-    a {
-      color: #5C49FF;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
   }
 
   .cd-date {
@@ -267,4 +278,44 @@ footer {
       }
     }
   }
+}
+
+/*_--__--_ PROJECTS _--__--_ */
+.projects-container {
+  background-image: url("../images/thumbtack.jpg");
+  padding: 20px;
+  .projects-intro {
+    text-align: center;
+    background-image: url("../images/paper.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    margin: 40px;
+    color: black;
+  }
+}
+
+.sticky-note {
+  @include box-shadow(black 2px 2px 10px);
+  background-color: #ffc;
+  margin: 10px;
+  color: black;
+  padding: 20px;
+  .technologies {
+    font-size: 12px;
+    color: gray;
+  }
+  .sticky-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.sticky-note:hover {
+  background-color: #E6E6FF;
+  cursor: pointer;
 }

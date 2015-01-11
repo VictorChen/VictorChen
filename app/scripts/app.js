@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp', ['ui.bootstrap', 'ngRoute', 'ngAnimate'])
+angular.module('myApp', ['ui.bootstrap', 'ngRoute', 'ngAnimate', 'ngSanitize'])
 .config(['$routeProvider', '$locationProvider',
   function ($routeProvider, $locationProvider) {
     $routeProvider
