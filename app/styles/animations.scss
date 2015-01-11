@@ -30,6 +30,27 @@
   }
 }
 
+@keyframes "blink" {
+  from,to { color: transparent; }
+  50% { color: black; }
+}
+@-moz-keyframes "blink" {
+  from,to { color: transparent; }
+  50% { color: black; }
+}
+@-webkit-keyframes "blink" {
+  from,to { color: transparent; }
+  50% { color: black; }
+}
+@-ms-keyframes "blink" {
+  from,to { color: transparent; }
+  50% { color: black; }
+}
+@-o-keyframes "blink" {
+  from,to { color: transparent; }
+  50% { color: black; }
+}
+
 .morph {
   @include transition(all 0.5s ease-in-out);
   &:hover {
@@ -69,4 +90,12 @@
     background-color: black;
     color: white;
   }
+}
+
+.cursor {
+  font-weight: 100;
+  font-size: 16px;
+  color: black;
+  vertical-align: bottom;
+  @include animation(blink 1s step-end infinite);
 }

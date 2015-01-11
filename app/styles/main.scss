@@ -7,19 +7,30 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   display: none !important;
 }
 
-.header-placeholder {
-  height: 30px;
-}
-
-/* Custom page footer */
-footer {
-  text-align: right;
-}
-
 /* Responsive: Portrait tablets and up */
 @include MQ(M) {
   .container {
     max-width: 730px;
+  }
+}
+
+// add my own hover effects!
+.navbar-nav > li > a:hover, .nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:hover {
+  background-image: none;
+  background-color: transparent;
+}
+
+.navbar-nav li.active a {
+  cursor: default;
+}
+
+.header-placeholder {
+  height: 60px;
+  @include MQ(M) {
+    & {
+      height: 50px;
+    }
   }
 }
 
@@ -40,15 +51,9 @@ footer {
   opacity: 0;
 }
 
-// add my own hover effects!
-.navbar-nav > li > a:hover, .nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:hover {
-  background-image: none;
-  background-color: transparent;
-}
-
-.navbar-nav li.active a {
-  cursor: default;
+/* Custom page footer */
+footer {
+  text-align: right;
 }
 
 /*_--__--_ HOME _--__--_ */
@@ -78,6 +83,10 @@ footer {
   > div {
     @include vertical-align;
   }
+  h1 {
+    margin-top: 0;
+  }
+  min-height: 350px;
   height: $screenHeight;
   text-align: center;
   background-image: url("../images/gray_pattern.gif");
@@ -87,15 +96,12 @@ footer {
 /*_--__--_ EXPERIENCE _--__--_ */
 .cd-container {
   @include clearfix;
-  width: 90%;
-  max-width: $L;
-  margin: 0 auto;
+  width: 100%;
   position: relative;
   padding: 2em 0;
-  margin: {
-    top: 2em;
-    bottom: 2em;
-  }
+  border-top: 6px solid #F0CA45;
+  border-bottom: 6px solid #F0CA45;
+  background-image: url("../images/linedpaper.png");
 
   &::before {
     /* this is the vertical line */
@@ -105,15 +111,10 @@ footer {
     left: 18px;
     height: 100%;
     width: 4px;
-    background: white;
+    background: #F0CA45;
   }
 
   @include MQ(M) {
-    margin: {
-      top: 3em;
-      bottom: 3em;
-    }
-
     &::before {
       left: 50%;
       margin-left: -2px;
@@ -124,7 +125,6 @@ footer {
 .cd-timeline-block {
   @include clearfix;
   position: relative;
-  margin: 2em 0;
 
   &:first-child {
     margin-top: 0;
@@ -154,7 +154,6 @@ footer {
   left: 0;
   width: 40px;
   height: 40px;
-  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05);
   background: #f0ca45;
 
   img {
@@ -181,9 +180,7 @@ footer {
   @include clearfix;
   position: relative;
   margin-left: 60px;
-  background: white;
   padding: 1em;
-  box-shadow: 0 3px 0 darken($backgroundColor, 5%);
 
   .cd-title {
     color: #303e49;
@@ -194,6 +191,7 @@ footer {
     color: #747272;
     margin: 1em 0;
     line-height: 1.6;
+    text-indent: 30px;
     a {
       color: #5C49FF;
       text-decoration: none;
@@ -205,7 +203,7 @@ footer {
 
   .cd-date {
     font-size: 13px;
-    color: white;
+    color: black;
     display: inline-block;
     float: left;
     padding: .8em 0;
@@ -240,7 +238,7 @@ footer {
       top: 24px;
       left: 100%;
       border-color: transparent;
-      border-left-color: white;
+      border-left-color: black;
     }
 
     .cd-date {
@@ -259,7 +257,7 @@ footer {
         left: auto;
         right: 100%;
         border-color: transparent;
-        border-right-color: white;
+        border-right-color: black;
       }
 
       .cd-date {
