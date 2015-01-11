@@ -6,19 +6,23 @@ angular.module('myApp', ['ui.bootstrap', 'ngRoute', 'ngAnimate'])
     $routeProvider
       .when('/experience', {
         templateUrl: '../views/experience.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        name: 'experience'
       })
       .when('/projects', {
         templateUrl: '../views/projects.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        name: 'projects'
       })
       .when('/contact', {
         templateUrl: '../views/contact.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        name: 'contact'
       })
       .when('/', {
         templateUrl: '../views/home.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        name: 'home'
       })
       .otherwise({
         redirectTo: '/'

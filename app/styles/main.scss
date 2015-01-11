@@ -47,6 +47,10 @@ footer {
   background-color: transparent;
 }
 
+.navbar-nav li.active a {
+  cursor: default;
+}
+
 /*_--__--_ HOME _--__--_ */
 .about-section {
   @include section();

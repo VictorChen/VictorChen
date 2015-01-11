@@ -14,7 +14,7 @@
   </head>
 
   <body ng-controller="MainCtrl">
-    <div ng-include="'views/header.html'"></div>
+    <main-header></main-header>
 
     <div class="view-animate-container">
         <div ng-view data-autoscroll class="view-animate"></div>
@@ -34,6 +34,7 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/directives/header.js"></script>
     <!-- endbuild -->
   </body>
 
