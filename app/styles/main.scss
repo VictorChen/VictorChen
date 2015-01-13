@@ -14,6 +14,7 @@ html {
 
 body {
   overflow-y: scroll;
+  position: relative;
 }
 
 a {
@@ -54,6 +55,7 @@ a {
 
 .view-animate-container {
   position: relative;
+  padding-bottom: 48px;
 }
 
 .view-animate.ng-enter, .view-animate.ng-leave {
@@ -72,7 +74,10 @@ a {
 /* Custom page footer */
 footer {
   text-align: right;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: $backgroundColor;
 }
 
@@ -327,35 +332,34 @@ footer {
 
 /*_--__--_ CONTACT _--__--_ */
 .contact-intro {
-  h1 {
-    margin-top: 0;
-  }
-  color: white;
-  height: $screenHeight;
+  height: 1200px;
   text-align: center;
   background-image: url("../images/trees.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  color: white;
+  .contact-medias a {
+    height: 200px;
+  }
 }
 
-.contact-intro video {
-  position: fixed;
-  top: 50px;
-  right: 0;
-  bottom: 0;
-  width: auto;
-  height: auto;
-  min-height: 100%;
-  min-width: 100%;
+@include MQ(M) {
+  .contact-intro {
+    height: $screenHeight;
+    .contact-medias {
+      height: 50%;
+      a {
+        height: 100%;
+      }
+    }
+  }
 }
 
-.contact-medias{
-  height: 50%;
+.contact-medias {
   > a {
     padding: 20px;
     display: block;
     opacity: 0.5;
-    height: 100%;
     font-size: 20px;
   }
   .github:hover {
@@ -380,6 +384,17 @@ footer {
     font-size: 50px;
     color: white;
   }
+}
+
+.contact-intro video {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .contact-medias.contact-top, .contact-medias.contact-bottom {
