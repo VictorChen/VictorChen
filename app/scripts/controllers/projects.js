@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('myApp').controller('ProjectsCtrl', function ($scope) {
+	$scope.Math = window.Math;
 	$scope.projects = [
 		[
 			{

@@ -21,7 +21,7 @@ a {
   text-decoration: none;
   &:hover {
     color: #B50000;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -72,6 +72,8 @@ a {
 /* Custom page footer */
 footer {
   text-align: right;
+  position: relative;
+  background-color: $backgroundColor;
 }
 
 /*_--__--_ HOME _--__--_ */
@@ -84,6 +86,9 @@ footer {
 .end-section {
   @include section();
   background-image: url("../images/coffee2.jpg");
+  a {
+    color: black;
+  }
 }
 
 .interests-section {
@@ -318,4 +323,93 @@ footer {
 .sticky-note:hover {
   background-color: #E6E6FF;
   cursor: pointer;
+}
+
+/*_--__--_ CONTACT _--__--_ */
+.contact-intro {
+  h1 {
+    margin-top: 0;
+  }
+  color: white;
+  height: $screenHeight;
+  text-align: center;
+  background-image: url("../images/trees.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact-intro video {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.contact-medias{
+  height: 50%;
+  > a {
+    padding: 20px;
+    display: block;
+    opacity: 0.5;
+    height: 100%;
+    font-size: 20px;
+  }
+  .github:hover {
+    font-size: 70px;
+  }
+  .linkedin:hover {
+    font-size: 60px;
+    color: black;
+  }
+  .email:hover {
+    font-size: 80px;
+  }
+  .codeeval:hover {
+    font-size: 50px;
+    color: white;
+  }
+  .stackoverflow:hover {
+    font-size: 30px;
+    color: white;
+  }
+  .facebook:hover {
+    font-size: 50px;
+    color: white;
+  }
+}
+
+.contact-medias.contact-top, .contact-medias.contact-bottom {
+  & > a:hover {
+    background-color: transparent;
+  }
+}
+
+.contact-top {
+  > a:nth-child(even) {
+    color: white;
+    background-color: black;
+  }
+  > a:nth-child(odd) {
+    color: black;
+    background-color: white;
+  }
+}
+
+.contact-bottom {
+  > a:nth-child(even) {
+    color: black;
+    background-color: white;
+  }
+  > a:nth-child(odd) {
+    color: white;
+    background-color: black;
+  }
+}
+
+.contact-container {
+  @include vertical-align;
 }

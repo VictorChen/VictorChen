@@ -6,8 +6,10 @@ angular.module('myApp')
     	restrict: 'EA',
       templateUrl: '../../views/sticky_note.html',
       scope: {
-        project: '=',
-        showImage: '@'
+        project: '='
+      },
+      controller: function ($scope) {
+      	$scope.showImage = (Math.random() < 0.5);
       }
     };
 });
