@@ -341,6 +341,9 @@ footer {
   .contact-medias a {
     height: 200px;
   }
+  video {
+    display: none;
+  }
 }
 
 @include MQ(M) {
@@ -351,6 +354,17 @@ footer {
       a {
         height: 100%;
       }
+    }
+    video {
+      position: fixed;
+      top: 50px;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      height: auto;
+      min-height: 100%;
+      min-width: 100%;
+      display: block;
     }
   }
 }
@@ -384,17 +398,6 @@ footer {
     font-size: 50px;
     color: white;
   }
-}
-
-.contact-intro video {
-  position: fixed;
-  top: 50px;
-  right: 0;
-  bottom: 0;
-  width: auto;
-  height: auto;
-  min-height: 100%;
-  min-width: 100%;
 }
 
 .contact-medias.contact-top, .contact-medias.contact-bottom {
