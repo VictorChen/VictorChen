@@ -5,24 +5,16 @@ angular.module('myApp', ['ui.bootstrap', 'ngRoute', 'ngAnimate', 'ngSanitize'])
   function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/experience', {
-        templateUrl: '../views/experience.html',
-        controller: 'MainCtrl',
-        name: 'experience'
+        templateUrl: '../views/experience.html'
       })
       .when('/projects', {
-        templateUrl: '../views/projects.html',
-        controller: 'MainCtrl',
-        name: 'projects'
+        templateUrl: '../views/projects.html'
       })
       .when('/contact', {
-        templateUrl: '../views/contact.html',
-        controller: 'MainCtrl',
-        name: 'contact'
+        templateUrl: '../views/contact.html'
       })
       .when('/', {
-        templateUrl: '../views/home.html',
-        controller: 'MainCtrl',
-        name: 'home'
+        templateUrl: '../views/home.html'
       })
       .otherwise({
         redirectTo: '/'

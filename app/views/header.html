@@ -15,18 +15,18 @@
           <a href="/" role="button" class="navbar-brand">Victor Chen</a>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li class="trim" ng-class="{active: page === 'home'}"><a href="/">Home</a></li>
-          <li class="trim" ng-class="{active: page === 'experience'}"><a href="experience">Experience</a></li>
-          <li class="trim" ng-class="{active: page === 'projects'}"><a href="projects">Projects</a></li>
-          <li class="trim" ng-class="{active: page === 'contact'}"><a href="contact">Contact Info</a></li>
+          <li class="trim" ng-class="{active: page === '/'}"><a href="/">Home</a></li>
+          <li class="trim" ng-class="{active: page === '/experience'}"><a href="experience">Experience</a></li>
+          <li class="trim" ng-class="{active: page === '/projects'}"><a href="projects">Projects</a></li>
+          <li class="trim" ng-class="{active: page === '/contact'}"><a href="contact">Contact Info</a></li>
         </ul>
       </nav>
       <nav class="visible-xs" collapse="!isCollapsed">
         <ul class="nav navbar-nav">
-          <li ng-class="{active: page === 'home'}"><a href="/" ng-click="isCollapsed = page === 'home'">Home</a></li>
-          <li ng-class="{active: page === 'experience'}"><a href="experience" ng-click="isCollapsed = page === 'experience'">Experience</a></li>
-          <li ng-class="{active: page === 'projects'}"><a href="projects" ng-click="isCollapsed = page === 'projects'">Projects</a></li>
-          <li ng-class="{active: page === 'contact'}"><a href="contact" ng-click="isCollapsed = page === 'contact'">Contact Info</a></li>
+          <li ng-class="{active: page === '/'}"><a href="/" ng-click="isCollapsed = page === '/'">Home</a></li>
+          <li ng-class="{active: page === '/experience'}"><a href="experience" ng-click="isCollapsed = page === '/experience'">Experience</a></li>
+          <li ng-class="{active: page === '/projects'}"><a href="projects" ng-click="isCollapsed = page === '/projects'">Projects</a></li>
+          <li ng-class="{active: page === '/contact'}"><a href="contact" ng-click="isCollapsed = page === '/contact'">Contact Info</a></li>
         </ul>
       </nav>
     </div>
