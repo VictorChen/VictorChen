@@ -232,6 +232,29 @@ module.exports = function (grunt) {
         src: 'app/libs/bootstrap.css',
         dest: 'bower_components/bootstrap-css-only/css/bootstrap.css'
       }
+    },
+
+    replace: {
+      dist: {
+        options: {
+          patterns: [
+            {
+              match: 'lastModifiedDate',
+              replacement: function () {
+                var date = new Date().toString().split(' ');
+                date = date.splice(0, 4);
+                return date.join(' ');
+              }
+            }
+          ]
+        },
+        files: [{
+          expand: true,
+          flatten: true,
+          src: ['dist/index.html'],
+          dest: 'dist'
+        }]
+      }
     }
   });
 
@@ -262,6 +285,7 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
+    'replace',
     'htmlmin'
   ]);
 };
