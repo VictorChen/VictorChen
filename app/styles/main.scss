@@ -79,6 +79,12 @@ footer {
   left: 0;
   width: 100%;
   background-color: $backgroundColor;
+  font-size: 12px;
+  @include MQ(M) {
+    & {
+      font-size: 14px;
+    }
+  }
 }
 
 /*_--__--_ HOME _--__--_ */
@@ -90,11 +96,7 @@ footer {
     background-color: black;
     opacity: 0.5;
     text-align: center;
-  }
-  @include MQ(S) {
-    .about-text {
-      font-size: 14px;
-    }
+    font-size: 11px;
   }
   @include MQ(M) {
     .about-text {
