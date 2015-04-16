@@ -125,7 +125,7 @@ angular.module('myApp').controller('ProjectsCtrl', function ($scope) {
 			},
 			{
 				title: 'Perforce Stats',
-				technologies: 'backbone.js, sqlite, node.js, d3.js, jquery, css, html',
+				technologies: 'backbone.js, handlebars.js, underscore.js, require.js sqlite, node.js, d3.js, jquery, sass, html',
 				content: 'This is my first hackathon project at FactSet. I created a website that allows you to search a particular user and display statistics about their submissions. You can see what languages they program in the most, the time they usually submit and which day of the week they submit the most.',
 				images: [
 					'images/projects/hackathon1.png'
@@ -133,7 +133,7 @@ angular.module('myApp').controller('ProjectsCtrl', function ($scope) {
 			},
 			{
 				title: 'Funny Submits',
-				technologies: 'node.js, sqlite, javascript, jquery, css, html',
+				technologies: 'node.js, handlebars.js, require.js, sqlite, javascript, jquery, sass, html',
 				content: 'This is my second hackathon project at FactSet. It was inspired by <a href="http://www.commitlogsfromlastnight.com/" target="__blank">Commit Logs From Last Night</a>. I created a website that pulls out all the funny submissions. I added a "like" system so people can vote on which commits they like the most.',
 				images: [
 					'images/projects/hackathon2.png'
@@ -145,6 +145,22 @@ angular.module('myApp').controller('ProjectsCtrl', function ($scope) {
 				content: 'This is the website you\'re looking at right now! I decided to redo my website because the old one was not responsive. Also, I wanted to try out angular.js so... here it is!',
 				images: [
 					'images/projects/current_website.png'
+				]
+			},
+			{
+				title: 'Slot Machine',
+				technologies: 'javascript, jquery, jquery ui, sass, html',
+				content: 'A reusable jquery slot machine widget. Easier to show you than to explain it: <a href="http://chenvic.com/slotmachine/" target="__blank">DEMO</a>',
+				images: [
+					'images/projects/slotmachine.png'
+				]
+			},
+			{
+				title: 'Online Band',
+				technologies: 'backbone.js, require.js, underscore.js, jquery, jquery ui, howler.js, sass, ',
+				content: 'Garage band on the web using HTML5/CSS3! Garage band is a really fun program to play around with, but unfortuntely I don\'t use a Mac so... let\'t build one instead! (garage band that is). This is still a work in progress (I\'m only one person with a limited amount of time...). Current progress can be seen here: <a href="http://chenvic.com/onlineband/" target="__blank">DEMO</a>',
+				images: [
+					'images/projects/onlineband.png'
 				]
 			}
 		]

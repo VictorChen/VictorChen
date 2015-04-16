@@ -86,6 +86,21 @@ footer {
   @include section();
   text-align: right;
   background-image: url("../images/coffee.jpg");
+  .about-text {
+    background-color: black;
+    opacity: 0.5;
+    text-align: center;
+  }
+  @include MQ(S) {
+    .about-text {
+      font-size: 14px;
+    }
+  }
+  @include MQ(M) {
+    .about-text {
+      font-size: 18px;
+    }
+  }
 }
 
 .end-section {
