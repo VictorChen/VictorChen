@@ -261,7 +261,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['default', 'connect:dist:keepalive']);
+      return grunt.task.run(['connect:dist:keepalive']);
     }
 
     grunt.task.run([
