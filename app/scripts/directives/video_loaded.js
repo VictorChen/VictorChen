@@ -3,8 +3,12 @@
 angular.module('myApp')
   .directive('videoLoaded', function () {
     return function ($scope, $element) {
-      $element[0].addEventListener('canplay', function () {
+      if ($element[0].readyState === 4) {
         $element.removeClass('hidden');
-      });
+      } else {
+        $element.one('canplay', function () {
+          $element.removeClass('hidden');
+        });
+      }
     };
 });
