@@ -365,7 +365,7 @@ footer {
 
 @include MQ(M) {
   .contact-intro {
-    height: $screenHeight;
+    height: $screenHeightWithoutFooter;
     .contact-medias {
       height: 50%;
       a {
@@ -395,31 +395,33 @@ footer {
   }
   .github:hover {
     font-size: 70px;
+    color: white;
+    background-color: black;
   }
   .linkedin:hover {
     font-size: 60px;
-    color: black;
+    color: white;
+    background-color: blue;
   }
   .email:hover {
     font-size: 80px;
+    color: white;
+    background-color: green;
   }
   .quora:hover {
     font-size: 80px;
     color: white;
+    background-color: red;
   }
   .stackoverflow:hover {
     font-size: 30px;
     color: white;
+    background-color: orange;
   }
   .twitter:hover {
     font-size: 60px;
-    color: white;
-  }
-}
-
-.contact-medias.contact-top, .contact-medias.contact-bottom {
-  & > a:hover {
-    background-color: transparent;
+    color: black;
+    background-color: aqua;
   }
 }
 
