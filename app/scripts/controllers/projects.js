@@ -2,6 +2,7 @@
 
 angular.module('myApp').controller('ProjectsCtrl', function ($scope) {
 	$scope.Math = window.Math;
+	// TODO: Load these via ajax
 	$scope.projects = [
 		[
 			{
@@ -117,7 +118,7 @@ angular.module('myApp').controller('ProjectsCtrl', function ($scope) {
 			{
 				title: 'My Old Website',
 				technologies: 'node.js, javascript, express, jquery, socket.io',
-				content: 'This is my <a href="http://nodejs-victorchen.rhcloud.com/" target="__blank">old website</a> (before this one). I created it because I was curious about node.js so I decided to give it a shot. I implemented a drawing game into the site to try out socket.io. Node.js is awesome!',
+				content: 'This is my <a href="http://nodejs-victorchen.rhcloud.com" target="__blank">old website</a> (before this one). I created it because I was curious about node.js so I decided to give it a shot. It uses node.js express server and I also implemented a real time drawing game into the site to try out socket.io. The website is currently hosted (free) by <a href="https://www.openshift.com" target="__blank">OpenShift</a>. Might need to reload the website a few times and wait for the server to start... be patient!',
 				images: [
 					'images/projects/old_website.png',
 					'images/projects/old_website_draw.png'
