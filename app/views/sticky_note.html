@@ -1,6 +1,11 @@
-<div class="sticky-note" ng-click="showImage = !showImage">
+<div class="sticky-note" ng-click="toggleNote($event);">
 	<div class="sticky-title">
-		{{project.title}} <div class="technologies">{{project.technologies}}</div>
+		{{project.title}} 
+    <div class="technologies">
+      <span class="technology" ng-repeat="technology in project.technologies">
+        {{technology}}
+      </span>
+    </div>
 	</div>
 	<div class="sticky-content" ng-hide="showImage" ng-bind-html="project.content"></div>
 	<div class="sticky-images" ng-show="showImage" ng-repeat="image in project.images">

@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 
-a {
+a, a:focus {
   color: #5C49FF;
   text-decoration: none;
   &:hover {

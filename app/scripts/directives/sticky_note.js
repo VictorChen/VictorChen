@@ -10,6 +10,13 @@ angular.module('myApp')
       },
       controller: function ($scope) {
       	$scope.showImage = (Math.random() < 0.5);
+        $scope.toggleNote = function($event) {
+          // Don't toggle note if clicked on a link
+          if ($event.target.tagName.toLowerCase() !== 'a') {
+            $scope.showImage = !$scope.showImage;
+            return $scope.showImage;
+          }
+        };
       }
     };
 });
