@@ -9,9 +9,9 @@ RewriteRule ^ - [L]
 RewriteRule ^ index.html [L]
 
 # Compress (gzip) files
-<filesmatch "\.(js|css|html|jpg|png|php)$">
-  SetOutputFilter DEFLATE
-</filesmatch>
+#<filesmatch "\.(js|css|html|jpg|png|php)$">
+#  SetOutputFilter DEFLATE
+#</filesmatch>
 
 # Cache fingerprinted files (ex: scripts.ff41a5af.js)
 <FilesMatch "\.\w\w\w\w\w\w\w\w\.">
