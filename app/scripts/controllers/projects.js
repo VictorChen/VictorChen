@@ -158,9 +158,17 @@ angular.module('myApp').controller('ProjectsCtrl', function ($scope) {
 			{
 				title: 'Online Band',
 				technologies: ['backbone.js', 'require.js', 'underscore.js', 'jquery', 'jquery ui', 'howler.js', 'sass'],
-				content: 'Garage band on the web using HTML5/CSS3! Garage band is a really fun program to play around with, but unfortuntely I don\'t use a Mac so... let\'t build one instead! (garage band that is). This is still a work in progress (I\'m only one person with a limited amount of time...). Current progress can be seen here: <a href="http://chenvic.com/onlineband/" target="__blank">DEMO</a>',
+				content: 'Garage band on the web using HTML5/CSS3! Garage band is a really fun program to play around with, but unfortuntely I don\'t use a Mac so... let\'t build one instead! (garage band that is). This is still a work in progress (I\'m only one person with a limited amount of time...). Prototype can be seen here: <a href="http://chenvic.com/onlineband/" target="__blank">DEMO</a>',
 				images: [
 					'images/projects/onlineband.png'
+				]
+			},
+			{
+				title: 'YouPost',
+				technologies: ['jquery', 'php', 'mysql', 'youtube-api', 'google-oauth', 'sass', 'html'],
+				content: 'I\'ve decided to create my own version of youtube with an enhanced comment system. The idea is that the comments will be side by side with the video and it will only show comments UP to the current time of the video.<br>There are a couple of benefits for this:<ol><li>You can watch the video and read comments are the same time</li><li>You don\'t have to worry about potential spoilers in the comment</li><li>You can easily add comments while you\'re watching</li></ol><br><a href="http://chenvic.com/youpost/" target="__blank">DEMO</a>',
+				images: [
+					'images/projects/youpost.png'
 				]
 			}
 		]
