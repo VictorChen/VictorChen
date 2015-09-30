@@ -452,13 +452,26 @@ footer {
 }
 
 .contact-bottom {
-  > a:nth-child(even) {
+  > a:nth-child(odd) {
     color: black;
     background-color: white;
   }
-  > a:nth-child(odd) {
+  > a:nth-child(even) {
     color: white;
     background-color: black;
+  }
+}
+
+@include MQ(M) {
+  .contact-bottom {
+    > a:nth-child(even) {
+      color: black;
+      background-color: white;
+    }
+    > a:nth-child(odd) {
+      color: white;
+      background-color: black;
+    }
   }
 }
 
