@@ -239,12 +239,10 @@ footer {
     text-indent: 30px;
   }
 
-  .cd-date {
+  .cd-date, .cd-location {
     font-size: 13px;
     color: black;
-    display: inline-block;
-    float: left;
-    padding: .8em 0;
+    display: block;
     opacity: .7;
   }
 
@@ -279,12 +277,19 @@ footer {
       border-left-color: black;
     }
 
-    .cd-date {
+    .cd-date, .cd-location {
       position: absolute;
       width: 100%;
       left: 122%;
-      top: 6px;
       font-size: 14px;
+
+      &.cd-date {
+        top: 6px;
+      }
+
+      &.cd-location {
+        top: 25px;
+      }
     }
 
     .cd-timeline-block:nth-child(even) & {
@@ -298,7 +303,7 @@ footer {
         border-right-color: black;
       }
 
-      .cd-date {
+      .cd-date, .cd-location {
         left: auto;
         right: 122%;
         text-align: right;
@@ -349,7 +354,7 @@ footer {
 
 /*_--__--_ CONTACT _--__--_ */
 .contact-intro {
-  height: 1200px;
+  height: 1600px;
   text-align: center;
   background-image: url("../images/trees.jpg");
   background-size: cover;
@@ -394,34 +399,44 @@ footer {
     font-size: 20px;
   }
   .github:hover {
-    font-size: 70px;
+    font-size: 52px;
     color: white;
     background-color: black;
   }
   .linkedin:hover {
-    font-size: 60px;
+    font-size: 42px;
     color: white;
-    background-color: blue;
+    background-color: #007bb6;
   }
   .email:hover {
-    font-size: 80px;
+    font-size: 63px;
     color: white;
     background-color: green;
   }
   .quora:hover {
-    font-size: 80px;
+    font-size: 56px;
     color: white;
-    background-color: red;
+    background-color: #B92B27;
   }
   .stackoverflow:hover {
-    font-size: 30px;
+    font-size: 24px;
     color: white;
-    background-color: orange;
+    background-color: #F69C55;
   }
   .twitter:hover {
-    font-size: 60px;
-    color: black;
-    background-color: aqua;
+    font-size: 52px;
+    color: white;
+    background-color: #55ACEE;
+  }
+  .facebook:hover {
+    font-size: 37px;
+    color: white;
+    background-color: #3B5998;
+  }
+  .foursquare:hover {
+    font-size: 31px;
+    color: white;
+    background-color: #F94877;
   }
 }
 

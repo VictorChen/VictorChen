@@ -272,6 +272,23 @@ module.exports = function (grunt) {
     ]);
   });
 
+  grunt.registerTask('fast', [
+    'clean:dist',
+    'jshint:all',
+    'useminPrepare',
+    'compass:dist',
+    'concat',
+    'ngAnnotate',
+    'copy:dist',
+    'copy:bootstrap',
+    'cssmin',
+    'uglify',
+    'filerev',
+    'usemin',
+    'replace',
+    'htmlmin'
+  ]);
+
   grunt.registerTask('default', [
     'clean:dist',
     'jshint:all',
